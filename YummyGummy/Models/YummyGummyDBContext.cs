@@ -9,9 +9,11 @@ namespace YummyGummy.Models
         {
         }
 
+        public DbSet<Product> Products { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql(@"Server=localhost;Port=3006;database=YummyGummy;uid=root;pwd=root;");
+            optionsBuilder.UseMySql(@"Server=localhost;Port=8889;database=YummyGummy;uid=root;pwd=root;");
         }
 
         public YummyGummyDBContext(DbContextOptions<YummyGummyDBContext> options)
